@@ -10,12 +10,14 @@ namespace asp連接sqlserver
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        private String strConn;
+        private SqlConnection myConn;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string strConn = "Data Source=KELVINNG;Initial Catalog=個人資料;Persist Security Info=True;User ID=kelvinngshuhui;Password=CHELsea16/17";
+             strConn = "Data Source=KELVINNG;Initial Catalog=個人資料;Persist Security Info=True;User ID=kelvinngshuhui;Password=CHELsea16/17";
 
             //建立連接
-            SqlConnection myConn = new SqlConnection(strConn);
+            myConn = new SqlConnection(strConn);
 
 
             //打開連接
